@@ -39,7 +39,11 @@ public class Client {
             os.close();
             is.close();
         } catch (Exception err) {
-            err.printStackTrace();
+            if (err.getMessage().equals("Connection refused")) {
+                System.out.println("Server is not running");
+            } else {
+                err.printStackTrace();
+            }
         }
         return sum;
     }
@@ -75,7 +79,11 @@ public class Client {
             os.close();
             is.close();
         } catch (Exception err) {
-            err.printStackTrace();
+            if (err.getMessage().equals("Connection refused")) {
+                System.out.println("Server is not running");
+            } else {
+                err.printStackTrace();
+            }
         }
         return quotient;
     }
@@ -106,7 +114,11 @@ public class Client {
             os.close();
             is.close();
         } catch (Exception err) {
-            err.printStackTrace();
+            if (err.getMessage().equals("Connection refused")) {
+                System.out.println("Server is not running");
+            } else {
+                err.printStackTrace();
+            }
         }
         return output;
     }
